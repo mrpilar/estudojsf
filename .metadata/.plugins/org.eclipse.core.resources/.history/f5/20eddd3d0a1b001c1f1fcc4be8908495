@@ -1,0 +1,8 @@
+package br.com.dominio.controller;
+
+import javax.inject.Named;
+
+@Named
+public class PessoaMB {
+
+}
