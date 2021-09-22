@@ -3,4 +3,5 @@
     <fullyQualifiedTypeName name="javax.enterprise.context.RequestScoped"/>
     <fullyQualifiedTypeName name="javax.enterprise.context.ApplicationScoped"/>
     <fullyQualifiedTypeName name="javax.enterprise.context.Conversation"/>
+    <fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
 </qualifiedTypeNameHistroy>
