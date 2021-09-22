@@ -1,0 +1,16 @@
+127.0.0.1 - - [22/Sep/2021:07:27:05 -0300] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:30:13 -0300] "GET /meu-projeto/CadastroPessoa.xhtml HTTP/1.1" 500 2680
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:30:13 -0300] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [22/Sep/2021:07:33:08 -0300] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:33:13 -0300] "GET /meu-projeto/CadastroPessoa.xhtml HTTP/1.1" 200 1041
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:34:03 -0300] "POST /meu-projeto/CadastroPessoa.xhtml;jsessionid=B7F4D93E9CA527586042508E18F2ACCC HTTP/1.1" 200 1020
+127.0.0.1 - - [22/Sep/2021:07:35:19 -0300] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:35:31 -0300] "POST /meu-projeto/CadastroPessoa.xhtml HTTP/1.1" 200 1071
+127.0.0.1 - - [22/Sep/2021:07:36:36 -0300] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [22/Sep/2021:07:37:03 -0300] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:37:05 -0300] "GET /meu-projeto/CadastroPessoa.xhtml HTTP/1.1" 500 2680
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:37:06 -0300] "GET /meu-projeto/CadastroPessoa.xhtml HTTP/1.1" 500 2680
+127.0.0.1 - - [22/Sep/2021:07:37:52 -0300] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:37:55 -0300] "GET /meu-projeto/CadastroPessoa.xhtml HTTP/1.1" 500 2680
+127.0.0.1 - - [22/Sep/2021:07:40:23 -0300] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [22/Sep/2021:07:40:27 -0300] "GET /meu-projeto/CadastroPessoa.xhtml HTTP/1.1" 200 996
