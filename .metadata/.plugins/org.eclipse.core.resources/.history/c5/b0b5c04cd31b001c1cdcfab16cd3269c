@@ -1,0 +1,14 @@
+package br.com.medicamento.dao;
+
+import java.io.Serializable;
+
+import javax.persistence.EntityManager;
+
+import br.com.medicamento.modelo.Base;
+
+public class DAO<T extends Base> implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	private static EntityManager manager = ConnectionFactory.getEntityManager();
+}

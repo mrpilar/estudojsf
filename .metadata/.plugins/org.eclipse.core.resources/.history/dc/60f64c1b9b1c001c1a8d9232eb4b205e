@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+	<h:outputStylesheet library="css" name="file.css" />
+
+</h:head>
+<h:body>
+
+	<header>
+		<div style="float: left; margin-left: 10px">
+			<h:graphicImage library="imagens" name="titulo.png" />
+		</div>
+
+		<div style="float: right; margin-left: 10px">
+			<h:graphicImage library="imagens" name="logo_contactura.png"
+				width="100px" />
+		</div>
+	</header>
+
+	<h:form id="frm">
+		<p:messages autoUpdate="true" />
+
+		<p:panelGrid columns="2">
+
+			<p:outputLabel value="Medicamento" />
+			<p:inputText size="30" value="#{medicamentoMB.medicamento.nome}"
+				required="true" label="Medicamento" />
+
+			<p:outputLabel value="Apresentação" />
+			<p:inputText size="30"
+				value="#{medicamentoMB.medicamento.apresentacao}" required="true"
+				label="Apresentação" />
+
+			<p:outputLabel value="Laboratório" />
+			<p:selectOneMenu value="#{medicamentoMB.medicamento.laboratorio}"
+				required="true" label="Laboratório">
+				<f:selectItem itemLabel="Selecione o laboratório"
+					noSelectionOption="true" />
+				<f:selectItem itemLabel="Bayer" itemValue="BAYER" />
+				<f:selectItem itemLabel="Cimed" itemValue="CIMED" />
+				<f:selectItem itemLabel="Teuto" itemValue="TEUTO" />
+				<f:selectItem itemLabel="Eurofarma" itemValue="EUROFARMA" />
+			</p:selectOneMenu>
+
+			<p:outputLabel value="Registro MS" />
+			<p:inputMask mask="9.9999.9999.999-9" size="13"
+				value="#{medicamentoMB.medicamento.registro}" required="true"
+				label="Registro MS" />
+
+			<p:outputLabel value="Preço" />
+			<p:inputText size="4" value="#{medicamentoMB.medicamento.preco}"
+				required="true" label="Preço">
+				<f:convertNumber minFractionDigits="2" locale="pt_BR"
+					minIntegerDigits="0" />
+			</p:inputText>
+
+			<p:outputLabel />
+			<p:commandButton value="Cadastrar"
+				action="#{medicamentoMB.adicionar}" update="frm tabela"
+				style="margin-top: 10px" />
+
+		</p:panelGrid>
+
+		<p:dataTable value="#{medicamentoMB.medicamentos}" var="m" id="tabela"
+			paginator="true" rows="5">
+
+			<p:column headerText="Medicamento">
+				<p:outputLabel value="#{m.nome}" />
+			</p:column>
+
+			<p:column headerText="Apresentação">
+				<p:outputLabel value="#{m.apresentacao}" />
+			</p:column>
+
+			<p:column headerText="Laboratório">
+				<p:outputLabel value="#{m.laboratorio}" />
+			</p:column>
+
+			<p:column headerText="Registro MS">
+				<p:outputLabel value="#{m.registro}" />
+			</p:column>
+
+			<p:column headerText="Preço">
+				<p:outputLabel value="#{m.preco}">
+					<f:convertNumber / type="currency" currencySymbol="R$">
+						</p:outputPanel>
+			</p:column>
+
+			<p:column headerText="">
+				<h:commandButton icon="" update="" process="">
+					<f:setPropertyActionListener value="" target="" />
+
+				</h:commandButton>
+
+				<h:commandButton icon="" update="" process="">
+					<f:setPropertyActionListener value="" target="" />
+
+				</h:commandButton>
+			</p:column>
+
+
+		</p:dataTable>
+
+	</h:form>
+
+</h:body>
+</html>

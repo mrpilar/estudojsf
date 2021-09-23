@@ -1,0 +1,20 @@
+package br.com.medicamento.service;
+
+import java.io.Serializable;
+
+import javax.inject.Inject;
+
+import br.com.medicamento.dao.DAO;
+import br.com.medicamento.modelo.Medicamento;
+
+public class MedicamentoService implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Inject
+	private DAO<Medicamento> dao;
+	
+	public void salvar(Medicamento m) {
+		dao.salvar(m);
+	}
+}

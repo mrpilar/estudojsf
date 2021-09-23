@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+	<h:outputStylesheet library="css" name="file.css" />
+
+</h:head>
+<h:body>
+
+	<header>
+		<div style="float: left; margin-left: 10px">
+			<h:graphicImage library="imagens" name="titulo.png" />
+		</div>
+
+		<div style="float: right; margin-left: 10px">
+			<h:graphicImage library="imagens" name="logo_contactura.png"
+				width="100px" />
+		</div>
+	</header>
+
+	<h:form id="frm">
+		<p:messages autoUpdate="true" />
+
+		<p:panelGrid columns="2">
+
+			<p:outputLabel value="Medicamento" />
+			<p:inputText size="30" value="#{medicamentoMB.medicamento.nome}"
+				required="true" label="Medicamento" />
+
+			<p:outputLabel value="Apresentação" />
+			<p:inputText size="30"
+				value="#{medicamentoMB.medicamento.apresentacao}" required="true"
+				label="Apresentação" />
+
+			<p:outputLabel value="Laboratório" />
+			<p:selectOneMenu value="#{medicamentoMB.medicamento.laboratorio}"
+				required="true" label="Laboratório">
+				<f:selectItem itemLabel="Selecione o laboratório"
+					noSelectionOption="true" />
+				<f:selectItem itemLabel="Bayer" itemValue="BAYER" />
+				<f:selectItem itemLabel="Cimed" itemValue="CIMED" />
+				<f:selectItem itemLabel="Teuto" itemValue="TEUTO" />
+				<f:selectItem itemLabel="Eurofarma" itemValue="EUROFARMA" />
+			</p:selectOneMenu>
+			
+			<p:outputLabel value="Registro MS"/>
+			<p:inputMask mask="9.9999.9999.999-9" size ="13" value="#{medicamentoMB.medicamento.registro}" required="true"/>
+		</p:panelGrid>
+
+	</h:form>
+
+</h:body>
+</html>
